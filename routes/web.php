@@ -22,6 +22,7 @@ Route::post('logout', [AuthController::class, 'logout'])->name(WebRoutes::LOGOUT
 
 
 Route::get('/', [TaskBookController::class, 'showAllTaskBooks'])->name(WebRoutes::SHOW_ALL_TASKS);
+Route::get('/tasks', [TaskBookController::class, 'getAllTaskBooks'])->name(WebRoutes::GET_ALL_TASKS);
 Route::get('tasks/create', [TaskBookController::class, 'showCreateTaskBookForm'])->name(WebRoutes::SHOW_CREATE_TASK_FORM);
 Route::post('tasks', [TaskBookController::class, 'createTaskBook'])->name(WebRoutes::CREATE_TASK);
 Route::get('tasks/{id}', [TaskBookController::class, 'showUpdateTaskBookForm'])

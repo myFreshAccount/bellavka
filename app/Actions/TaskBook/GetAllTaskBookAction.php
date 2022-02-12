@@ -10,6 +10,6 @@ class GetAllTaskBookAction extends Action
 {
     public function run(CetAllTaskBookRequest $request)
     {
-        return app(GetAllTaskBooksTask::class)->run();
+        return app(GetAllTaskBooksTask::class)->run(true);
     }
 }

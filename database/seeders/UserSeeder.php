@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         $admin = app(FindUserByLoginTask::class)->run($adminLogin);
 
         if(is_null($admin)) {
-            $admin = app(CreateUserByCredentialsTask::class)->run($adminLogin, $adminPassword);
+            app(CreateUserByCredentialsTask::class)->run($adminLogin, $adminPassword);
         }
     }
 }
